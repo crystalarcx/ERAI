@@ -71,10 +71,10 @@ export default function App() {
         {/* Table of Contents */}
         <nav className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.02)]" aria-label="目錄">
           <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">本頁目錄</h2>
-          <ul className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+          <ul className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6">
             <li>
-              <a href="#summary-items" className="flex items-center gap-2 text-slate-600 hover:text-blue-600 font-medium transition-colors group">
-                <div className="w-6 h-6 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-xs group-hover:bg-blue-50 group-hover:border-blue-200 group-hover:text-blue-600 transition-colors">1</div>
+              <a href="#summary-items" className="flex items-center gap-2 text-slate-600 hover:text-emerald-600 font-medium transition-colors group">
+                <div className="w-6 h-6 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-xs group-hover:bg-emerald-50 group-hover:border-emerald-200 group-hover:text-emerald-600 transition-colors">1</div>
                 目前彙總項目
               </a>
             </li>
@@ -88,6 +88,12 @@ export default function App() {
               <a href="#data-scope" className="flex items-center gap-2 text-slate-600 hover:text-blue-600 font-medium transition-colors group">
                 <div className="w-6 h-6 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-xs group-hover:bg-blue-50 group-hover:border-blue-200 group-hover:text-blue-600 transition-colors">3</div>
                 資料匯入範圍
+              </a>
+            </li>
+            <li>
+              <a href="#feedback" className="flex items-center gap-2 text-slate-600 hover:text-indigo-600 font-medium transition-colors group">
+                <div className="w-6 h-6 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-xs group-hover:bg-indigo-50 group-hover:border-indigo-200 group-hover:text-indigo-600 transition-colors">4</div>
+                意見回饋
               </a>
             </li>
           </ul>
