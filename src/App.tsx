@@ -68,8 +68,33 @@ export default function App() {
 
       <main className="max-w-4xl mx-auto px-5 sm:px-8 py-12 sm:py-16 space-y-16 sm:space-y-24">
         
+        {/* Table of Contents */}
+        <nav className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.02)]" aria-label="目錄">
+          <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">本頁目錄</h2>
+          <ul className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+            <li>
+              <a href="#summary-items" className="flex items-center gap-2 text-slate-600 hover:text-blue-600 font-medium transition-colors group">
+                <div className="w-6 h-6 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-xs group-hover:bg-blue-50 group-hover:border-blue-200 group-hover:text-blue-600 transition-colors">1</div>
+                目前彙總項目
+              </a>
+            </li>
+            <li>
+              <a href="#use-cases" className="flex items-center gap-2 text-slate-600 hover:text-purple-600 font-medium transition-colors group">
+                <div className="w-6 h-6 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-xs group-hover:bg-purple-50 group-hover:border-purple-200 group-hover:text-purple-600 transition-colors">2</div>
+                適用場景
+              </a>
+            </li>
+            <li>
+              <a href="#data-scope" className="flex items-center gap-2 text-slate-600 hover:text-blue-600 font-medium transition-colors group">
+                <div className="w-6 h-6 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-xs group-hover:bg-blue-50 group-hover:border-blue-200 group-hover:text-blue-600 transition-colors">3</div>
+                資料匯入範圍
+              </a>
+            </li>
+          </ul>
+        </nav>
+
         {/* Section 1: Summary Items */}
-        <section>
+        <section id="summary-items" className="scroll-mt-24">
           <header className="mb-6 sm:mb-10">
             <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
               <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-600" />
@@ -102,8 +127,8 @@ export default function App() {
 
         <hr className="border-slate-100" />
 
-        {/* Section 3: Use Cases */}
-        <section>
+        {/* Section 2: Use Cases */}
+        <section id="use-cases" className="scroll-mt-24">
           <header className="mb-6 sm:mb-10">
             <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
               <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6 text-purple-600" />
@@ -183,7 +208,7 @@ export default function App() {
         <hr className="border-slate-100" />
 
         {/* Section 3: Data Scope */}
-        <section>
+        <section id="data-scope" className="scroll-mt-24">
           <header className="mb-6 sm:mb-10">
             <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
               <Activity className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
@@ -207,6 +232,27 @@ export default function App() {
                 </div>
               );
             })}
+          </div>
+        </section>
+
+        <hr className="border-slate-100" />
+
+        {/* Section 4: Feedback */}
+        <section id="feedback" className="scroll-mt-24 pb-8">
+          <div className="bg-blue-50 rounded-3xl p-8 sm:p-10 border border-blue-100 shadow-[0_4px_20px_-4px_rgba(59,130,246,0.1)] text-center flex flex-col items-center justify-center">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight mb-4">我們需要您的寶貴建議</h2>
+            <p className="text-base sm:text-lg text-slate-600 mb-8 max-w-xl">
+              若您在使用上有任何問題、功能建議，或發現需要修正的地方，歡迎透過下方的回饋表單與我們聯繫。
+            </p>
+            <a 
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdmG1lU2EZ0dIebMtatexqoE3PJ0B3WDxAsAbbuEE9g3VbM2w/viewform?usp=publish-editor" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-bold text-white bg-blue-600 rounded-xl hover:bg-blue-700 transition-colors shadow-sm hover:shadow-md"
+            >
+              <MessageSquare className="w-5 h-5" />
+              <span>填寫意見回饋表單</span>
+            </a>
           </div>
         </section>
       </main>
