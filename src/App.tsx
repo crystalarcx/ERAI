@@ -155,12 +155,12 @@ export default function App() {
                 打開彙總頁面，用 <strong className="text-blue-600 font-semibold bg-blue-50 px-1.5 sm:px-2 py-0.5 rounded">30 秒</strong> 快速掌握病人病史，無須耗時翻閱各科紀錄。
               </p>
               
-              <div className="rounded-2xl overflow-hidden border border-slate-100 bg-slate-50 relative group">
-                <div className="absolute top-3 left-3 bg-white/90 backdrop-blur text-slate-700 text-xs font-bold px-2 py-1 rounded shadow-sm z-10">
+              <div className="rounded-2xl overflow-hidden border border-slate-200 bg-white relative group shadow-sm">
+                <div className="absolute top-3 left-3 bg-white/90 backdrop-blur text-slate-700 text-xs font-bold px-3 py-1 rounded-full shadow-sm z-10 border border-slate-100">
                   按鈕位置示意
                 </div>
-                <div className="aspect-auto w-full bg-slate-200 flex flex-col items-center justify-center text-slate-500 text-sm overflow-hidden min-h-[200px]">
-                  <img src="/pic1.png" alt="病歷彙總 AI 按鈕位置" className="w-full h-auto object-cover" onError={(e) => { e.currentTarget.style.display = 'none'; const parent = e.currentTarget.parentElement; if(parent) { parent.classList.add('p-8'); parent.innerHTML = '如果您想在此顯示圖片，請將圖片上傳至專案的 <strong>public</strong> 資料夾，並命名為 <strong>pic1.png</strong>'; } }} />
+                <div className="w-full flex items-center justify-center p-4 sm:p-8 bg-slate-50">
+                  <img src="/pic1.png" alt="病歷彙總 AI 按鈕位置" className="max-w-full h-auto rounded shadow-sm border border-slate-200" />
                 </div>
               </div>
             </div>
@@ -176,12 +176,12 @@ export default function App() {
                 系統會自動帶入病人所有病史及既有資料，您可以直接針對目前的臨床狀況進行提問與討論。
               </p>
 
-              <div className="rounded-2xl overflow-hidden border border-slate-100 bg-slate-50 relative group mb-6 sm:mb-8">
-                <div className="absolute top-3 left-3 bg-white/90 backdrop-blur text-slate-700 text-xs font-bold px-2 py-1 rounded shadow-sm z-10">
+              <div className="rounded-2xl overflow-hidden border border-slate-200 bg-white relative group mb-6 sm:mb-8 shadow-sm">
+                <div className="absolute top-3 left-3 bg-white/90 backdrop-blur text-slate-700 text-xs font-bold px-3 py-1 rounded-full shadow-sm z-10 border border-slate-100">
                   詢問功能與補充資料欄位示意
                 </div>
-                <div className="aspect-auto w-full bg-slate-200 flex flex-col items-center justify-center text-slate-500 text-sm overflow-hidden min-h-[200px]">
-                  <img src="/pic2.png" alt="詢問 AI 與補充資料欄位" className="w-full h-auto object-cover" onError={(e) => { e.currentTarget.style.display = 'none'; const parent = e.currentTarget.parentElement; if(parent) { parent.classList.add('p-8'); parent.innerHTML = '如果您想在此顯示圖片，請將圖片上傳至專案的 <strong>public</strong> 資料夾，並命名為 <strong>pic2.png</strong>'; } }} />
+                <div className="w-full flex items-center justify-center p-4 sm:p-8 bg-slate-50">
+                  <img src="/pic2.png" alt="詢問 AI 與補充資料欄位" className="max-w-full h-auto rounded shadow-sm border border-slate-200" />
                 </div>
               </div>
               
