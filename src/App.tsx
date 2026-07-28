@@ -62,6 +62,12 @@ export default function App() {
             <p className="text-lg sm:text-xl text-slate-500 leading-relaxed max-w-2xl">
               這份文件將帶您了解系統如何整合病歷資料，並展示其實際的應用場景與彙總項目。
             </p>
+            <div className="mt-2 bg-blue-50/50 border border-blue-100 rounded-2xl p-4 sm:p-5 flex gap-3 sm:gap-4 text-blue-900 shadow-sm">
+              <Info className="w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-0.5 text-blue-600" />
+              <div className="text-sm sm:text-base leading-relaxed">
+                <strong>版面說明：</strong>實際使用時，頁面左側為彙總結果，右側為原始資料。建議直接閱讀左側的彙總資料，右側可暫時忽略。
+              </div>
+            </div>
           </div>
         </div>
       </header>
