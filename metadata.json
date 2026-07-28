@@ -1,0 +1,6 @@
+{
+  "name": "病歷彙總 AI 介紹",
+  "description": "病歷彙總 AI 系統的介紹網頁，包含資料匯入範圍、彙總項目與適用場景說明。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
