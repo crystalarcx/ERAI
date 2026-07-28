@@ -68,37 +68,7 @@ export default function App() {
 
       <main className="max-w-4xl mx-auto px-5 sm:px-8 py-12 sm:py-16 space-y-16 sm:space-y-24">
         
-        {/* Section 1: Data Scope */}
-        <section>
-          <header className="mb-6 sm:mb-10">
-            <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
-              <Activity className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">資料匯入範圍</h2>
-            </div>
-            <p className="text-base sm:text-lg text-slate-600">考量效率與匯入速度，目前系統撈取的資料範圍如下：</p>
-          </header>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5">
-            {dataScopes.map((scope, idx) => {
-              const Icon = scope.icon;
-              return (
-                <div key={idx} className={`bg-white rounded-2xl p-5 sm:p-6 border ${scope.border} shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] flex items-start gap-3 sm:gap-4 transition-transform hover:-translate-y-1 duration-300`}>
-                  <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl ${scope.bg} ${scope.color} flex items-center justify-center shrink-0`}>
-                    <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-1">{scope.title}</h3>
-                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">{scope.desc}</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </section>
-
-        <hr className="border-slate-100" />
-
-        {/* Section 2: Summary Items */}
+        {/* Section 1: Summary Items */}
         <section>
           <header className="mb-6 sm:mb-10">
             <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
@@ -160,7 +130,7 @@ export default function App() {
                   按鈕位置示意
                 </div>
                 <div className="w-full flex items-center justify-center p-4 sm:p-8 bg-slate-50">
-                  <img src="/pic1.png" alt="病歷彙總 AI 按鈕位置" className="max-w-full h-auto rounded shadow-sm border border-slate-200" />
+                  <img src="./pic1.png" alt="病歷彙總 AI 按鈕位置" className="max-w-full h-auto rounded shadow-sm border border-slate-200" />
                 </div>
               </div>
             </div>
@@ -181,7 +151,7 @@ export default function App() {
                   詢問功能與補充資料欄位示意
                 </div>
                 <div className="w-full flex items-center justify-center p-4 sm:p-8 bg-slate-50">
-                  <img src="/pic2.png" alt="詢問 AI 與補充資料欄位" className="max-w-full h-auto rounded shadow-sm border border-slate-200" />
+                  <img src="./pic2.png" alt="詢問 AI 與補充資料欄位" className="max-w-full h-auto rounded shadow-sm border border-slate-200" />
                 </div>
               </div>
               
@@ -207,6 +177,36 @@ export default function App() {
               </div>
             </div>
 
+          </div>
+        </section>
+
+        <hr className="border-slate-100" />
+
+        {/* Section 3: Data Scope */}
+        <section>
+          <header className="mb-6 sm:mb-10">
+            <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+              <Activity className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">資料匯入範圍</h2>
+            </div>
+            <p className="text-base sm:text-lg text-slate-600">考量效率與匯入速度，目前系統撈取的資料範圍如下：</p>
+          </header>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5">
+            {dataScopes.map((scope, idx) => {
+              const Icon = scope.icon;
+              return (
+                <div key={idx} className={`bg-white rounded-2xl p-5 sm:p-6 border ${scope.border} shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] flex items-start gap-3 sm:gap-4 transition-transform hover:-translate-y-1 duration-300`}>
+                  <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl ${scope.bg} ${scope.color} flex items-center justify-center shrink-0`}>
+                    <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-1">{scope.title}</h3>
+                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">{scope.desc}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </section>
       </main>
