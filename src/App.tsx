@@ -76,7 +76,7 @@ export default function App() {
         
         {/* Table of Contents */}
         <nav className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.02)]" aria-label="目錄">
-          <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">本頁目錄</h2>
+          <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">本頁目錄 <span className="font-normal lowercase tracking-normal text-slate-400 ml-1">(點擊可以跳轉到章節)</span></h2>
           <ul className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6">
             <li>
               <a href="#summary-items" className="flex items-center gap-2 text-slate-600 hover:text-emerald-600 font-medium transition-colors group">
@@ -167,7 +167,7 @@ export default function App() {
                   按鈕位置示意
                 </div>
                 <div className="w-full flex items-center justify-center p-4 sm:p-8 bg-slate-50">
-                  <img src="./pic1.png" alt="病歷彙總 AI 按鈕位置" className="max-w-full h-auto rounded shadow-sm border border-slate-200" />
+                  <img src="/pic1.png" alt="病歷彙總 AI 按鈕位置" className="max-w-full h-auto rounded shadow-sm border border-slate-200" />
                 </div>
               </div>
             </div>
@@ -188,7 +188,7 @@ export default function App() {
                   詢問功能與補充資料欄位示意
                 </div>
                 <div className="w-full flex items-center justify-center p-4 sm:p-8 bg-slate-50">
-                  <img src="./pic2.png" alt="詢問 AI 與補充資料欄位" className="max-w-full h-auto rounded shadow-sm border border-slate-200" />
+                  <img src="/pic2.png" alt="詢問 AI 與補充資料欄位" className="max-w-full h-auto rounded shadow-sm border border-slate-200" />
                 </div>
               </div>
               
