@@ -3,6 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 import React from 'react';
+import pic1 from './assets/pic1.png';
+import pic2 from './assets/pic2.png';
 import { 
   BrainCircuit, 
   Stethoscope, 
@@ -163,11 +165,8 @@ export default function App() {
               </p>
               
               <div className="rounded-2xl overflow-hidden border border-slate-200 bg-white relative group shadow-sm">
-                <div className="absolute top-3 left-3 bg-white/90 backdrop-blur text-slate-700 text-xs font-bold px-3 py-1 rounded-full shadow-sm z-10 border border-slate-100">
-                  按鈕位置示意
-                </div>
                 <div className="w-full flex items-center justify-center p-4 sm:p-8 bg-slate-50">
-                  <img src="/pic1.png" alt="病歷彙總 AI 按鈕位置" className="max-w-full h-auto rounded shadow-sm border border-slate-200" />
+                  <img src={pic1} alt="病歷彙總 AI 按鈕位置" className="max-w-full h-auto rounded shadow-sm border border-slate-200" />
                 </div>
               </div>
             </div>
@@ -184,11 +183,8 @@ export default function App() {
               </p>
 
               <div className="rounded-2xl overflow-hidden border border-slate-200 bg-white relative group mb-6 sm:mb-8 shadow-sm">
-                <div className="absolute top-3 left-3 bg-white/90 backdrop-blur text-slate-700 text-xs font-bold px-3 py-1 rounded-full shadow-sm z-10 border border-slate-100">
-                  詢問功能與補充資料欄位示意
-                </div>
                 <div className="w-full flex items-center justify-center p-4 sm:p-8 bg-slate-50">
-                  <img src="/pic2.png" alt="詢問 AI 與補充資料欄位" className="max-w-full h-auto rounded shadow-sm border border-slate-200" />
+                  <img src={pic2} alt="詢問 AI 與補充資料欄位" className="max-w-full h-auto rounded shadow-sm border border-slate-200" />
                 </div>
               </div>
               
