@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 import React from 'react';
+// 確保圖片在 GitHub Pages 正常顯示的引入方式
 import pic1 from './assets/pic1.png';
 import pic2 from './assets/pic2.png';
 import { 
