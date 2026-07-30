@@ -4,7 +4,7 @@
  */
 import React from 'react';
 // 直接引入已經轉成 Base64 字串的變數，確保 GitHub Pages 絕對能讀取到
-import { pic1Base64 as pic1, pic2Base64 as pic2 } from './assets/images';
+import { pic1Base64 as pic1, pic2Base64 as pic2, queryBase64 as query, mrBase64 as mr, AIERBase64 as AIER } from './assets/images';
 import { 
   BrainCircuit, 
   Stethoscope, 
@@ -165,22 +165,30 @@ export default function App() {
               </p>
               
               {/* 行動裝置/高層展示友善的關鍵字大字報 */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
+              <div className="mb-6 sm:mb-8 max-w-sm">
                 <div className="bg-blue-600 rounded-2xl p-5 sm:p-6 text-center text-white shadow-sm flex flex-col justify-center items-center">
                   <div className="text-xs font-semibold text-blue-200 mb-2 tracking-widest uppercase">核心價值</div>
                   <div className="text-3xl sm:text-4xl font-extrabold tracking-widest">即刻掌握</div>
                 </div>
-                <div className="bg-slate-800 rounded-2xl p-5 sm:p-6 text-center text-white shadow-sm flex flex-col justify-center items-center">
-                  <div className="text-xs font-semibold text-slate-400 mb-2 tracking-widest uppercase">彙總重點</div>
-                  <div className="text-2xl sm:text-3xl font-bold tracking-widest flex items-center justify-center gap-2 sm:gap-3 w-full">
-                    主訴 <span className="text-slate-500 text-sm opacity-50">●</span> 看診 <span className="text-slate-500 text-sm opacity-50">●</span> 療程
-                  </div>
-                </div>
               </div>
               
-              <div className="rounded-2xl overflow-hidden border border-slate-200 bg-white relative group shadow-sm">
+              <div className="rounded-2xl overflow-hidden border border-slate-200 bg-white relative group shadow-sm mb-6 sm:mb-8">
                 <div className="w-full flex items-center justify-center p-4 sm:p-8 bg-slate-50">
                   <img src={pic1} alt="病歷彙總 AI 按鈕位置" className="max-w-full h-auto rounded shadow-sm border border-slate-200" />
+                </div>
+              </div>
+
+              <h4 className="text-lg sm:text-xl font-bold text-slate-800 mb-3 sm:mb-4">傳統病歷彙總需一個一個點開</h4>
+              <div className="rounded-2xl overflow-hidden border border-slate-200 bg-white relative group mb-6 sm:mb-8 shadow-sm">
+                <div className="w-full flex items-center justify-center p-4 sm:p-8 bg-slate-50">
+                  <img src={mr} alt="傳統病歷彙總需一個一個點開" className="max-w-full h-auto rounded shadow-sm border border-slate-200" />
+                </div>
+              </div>
+
+              <h4 className="text-lg sm:text-xl font-bold text-slate-800 mb-3 sm:mb-4">AI彙總會整理病史，提醒需注意風險</h4>
+              <div className="rounded-2xl overflow-hidden border border-slate-200 bg-white relative group shadow-sm">
+                <div className="w-full flex items-center justify-center p-4 sm:p-8 bg-slate-50">
+                  <img src={AIER} alt="AI彙總會整理病史，提醒需注意風險" className="max-w-full h-auto rounded shadow-sm border border-slate-200" />
                 </div>
               </div>
             </div>
@@ -199,6 +207,13 @@ export default function App() {
               <div className="rounded-2xl overflow-hidden border border-slate-200 bg-white relative group mb-6 sm:mb-8 shadow-sm">
                 <div className="w-full flex items-center justify-center p-4 sm:p-8 bg-slate-50">
                   <img src={pic2} alt="詢問 AI 與補充資料欄位" className="max-w-full h-auto rounded shadow-sm border border-slate-200" />
+                </div>
+              </div>
+
+              <h4 className="text-lg sm:text-xl font-bold text-slate-800 mb-3 sm:mb-4">提問問題，ai會自行帶入病人病史及檢驗資料</h4>
+              <div className="rounded-2xl overflow-hidden border border-slate-200 bg-white relative group mb-6 sm:mb-8 shadow-sm">
+                <div className="w-full flex items-center justify-center p-4 sm:p-8 bg-slate-50">
+                  <img src={query} alt="提問問題，ai會自行帶入病人病史及檢驗資料" className="max-w-full h-auto rounded shadow-sm border border-slate-200" />
                 </div>
               </div>
               
