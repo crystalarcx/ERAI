@@ -3,9 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 import React from 'react';
-// 將圖片引入並強制轉為 Base64（避免 GitHub Pages 找不到相對路徑的問題）
-import pic1 from './assets/pic1.png';
-import pic2 from './assets/pic2.png';
+// 直接引入已經轉成 Base64 字串的變數，確保 GitHub Pages 絕對能讀取到
+import { pic1Base64 as pic1, pic2Base64 as pic2 } from './assets/images';
 import { 
   BrainCircuit, 
   Stethoscope, 
