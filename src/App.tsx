@@ -164,14 +164,6 @@ export default function App() {
                 打開彙總頁面，用 <strong className="text-blue-600 font-semibold bg-blue-50 px-1.5 sm:px-2 py-0.5 rounded">30 秒</strong> 快速掌握病人病史，無須耗時翻閱各科紀錄。
               </p>
               
-              {/* 行動裝置/高層展示友善的關鍵字大字報 */}
-              <div className="mb-6 sm:mb-8 max-w-sm">
-                <div className="bg-blue-600 rounded-2xl p-5 sm:p-6 text-center text-white shadow-sm flex flex-col justify-center items-center">
-                  <div className="text-xs font-semibold text-blue-200 mb-2 tracking-widest uppercase">核心價值</div>
-                  <div className="text-3xl sm:text-4xl font-extrabold tracking-widest">即刻掌握</div>
-                </div>
-              </div>
-              
               <div className="rounded-2xl overflow-hidden border border-slate-200 bg-white relative group shadow-sm mb-6 sm:mb-8">
                 <div className="w-full flex items-center justify-center p-4 sm:p-8 bg-slate-50">
                   <img src={pic1} alt="病歷彙總 AI 按鈕位置" className="max-w-full h-auto rounded shadow-sm border border-slate-200" />
@@ -210,17 +202,20 @@ export default function App() {
                 </div>
               </div>
 
-              <h4 className="text-lg sm:text-xl font-bold text-slate-800 mb-3 sm:mb-4">提問問題，ai會自行帶入病人病史及檢驗資料</h4>
+              <h4 className="text-lg sm:text-xl font-bold text-slate-800 mb-3 sm:mb-4">提問問題，AI會自行帶入病人病史及檢驗資料</h4>
               <div className="rounded-2xl overflow-hidden border border-slate-200 bg-white relative group mb-6 sm:mb-8 shadow-sm">
                 <div className="w-full flex items-center justify-center p-4 sm:p-8 bg-slate-50">
-                  <img src={query} alt="提問問題，ai會自行帶入病人病史及檢驗資料" className="max-w-full h-auto rounded shadow-sm border border-slate-200" />
+                  <img src={query} alt="提問問題，AI會自行帶入病人病史及檢驗資料" className="max-w-full h-auto rounded shadow-sm border border-slate-200" />
                 </div>
               </div>
               
-              <div className="bg-amber-50 border border-amber-100 rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8 flex gap-3 sm:gap-4 text-amber-900">
-                <TriangleAlert className="w-5 h-5 sm:w-6 sm:h-6 shrink-0 mt-0.5 text-amber-600" />
-                <div className="text-sm sm:text-base leading-relaxed">
-                  <strong>注意事項：</strong>對話自動帶入之資料 <span className="underline decoration-amber-400 underline-offset-4 decoration-2">不含本次急診的現病史、當次抽血報告及檢驗結果</span>。如需納入做綜合判斷，請手動貼於「補充資料」欄位。
+              <div className="bg-red-50 border border-red-200 rounded-2xl p-5 sm:p-6 mb-6 sm:mb-8 flex gap-3 sm:gap-4 text-red-900 shadow-sm relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-1.5 h-full bg-red-500"></div>
+                <TriangleAlert className="w-6 h-6 sm:w-8 sm:h-8 shrink-0 mt-0.5 text-red-600" />
+                <div className="text-base sm:text-lg leading-relaxed flex-1">
+                  <strong className="block text-red-800 text-lg sm:text-xl mb-1.5 font-bold">【注意事項】</strong>
+                  對話自動帶入之資料 <span className="font-extrabold underline decoration-red-400 underline-offset-4 decoration-2 text-red-900 bg-red-100 px-1 py-0.5 rounded">不含本次急診的現病史、當次抽血報告及檢驗結果</span>。<br className="hidden sm:block" />
+                  如需納入做綜合判斷，請手動貼於「補充資料」欄位。
                 </div>
               </div>
 
