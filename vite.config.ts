@@ -6,6 +6,10 @@ import {defineConfig} from 'vite';
 export default defineConfig(() => {
   return {
     base: './',
+    build: {
+      // 增加資源內聯限制，將圖片直接轉為 Base64 寫入程式碼，避免 GitHub Pages 路徑問題
+      assetsInlineLimit: 1048576, 
+    },
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
