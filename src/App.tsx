@@ -24,7 +24,8 @@ import {
   MessageSquare,
   Sparkles,
   TriangleAlert,
-  ChevronRight
+  ChevronRight,
+  MoveHorizontal
 } from 'lucide-react';
 
 const dataScopes = [
@@ -81,25 +82,25 @@ export default function App() {
           <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">本頁目錄 <span className="font-normal lowercase tracking-normal text-slate-400 ml-1">(點擊可以跳轉到章節)</span></h2>
           <ul className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6">
             <li>
-              <a href="#summary-items" className="flex items-center gap-2 text-slate-600 hover:text-emerald-600 font-medium transition-colors group">
+              <a href="#summary-items" className="flex items-center gap-2 text-slate-600 hover:text-emerald-600 font-medium transition-colors group py-1 sm:py-0">
                 <div className="w-6 h-6 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-xs group-hover:bg-emerald-50 group-hover:border-emerald-200 group-hover:text-emerald-600 transition-colors">1</div>
                 目前彙總項目
               </a>
             </li>
             <li>
-              <a href="#use-cases" className="flex items-center gap-2 text-slate-600 hover:text-purple-600 font-medium transition-colors group">
+              <a href="#use-cases" className="flex items-center gap-2 text-slate-600 hover:text-purple-600 font-medium transition-colors group py-1 sm:py-0">
                 <div className="w-6 h-6 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-xs group-hover:bg-purple-50 group-hover:border-purple-200 group-hover:text-purple-600 transition-colors">2</div>
                 適用場景
               </a>
             </li>
             <li>
-              <a href="#data-scope" className="flex items-center gap-2 text-slate-600 hover:text-blue-600 font-medium transition-colors group">
+              <a href="#data-scope" className="flex items-center gap-2 text-slate-600 hover:text-blue-600 font-medium transition-colors group py-1 sm:py-0">
                 <div className="w-6 h-6 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-xs group-hover:bg-blue-50 group-hover:border-blue-200 group-hover:text-blue-600 transition-colors">3</div>
                 資料匯入範圍
               </a>
             </li>
             <li>
-              <a href="#feedback" className="flex items-center gap-2 text-slate-600 hover:text-indigo-600 font-medium transition-colors group">
+              <a href="#feedback" className="flex items-center gap-2 text-slate-600 hover:text-indigo-600 font-medium transition-colors group py-1 sm:py-0">
                 <div className="w-6 h-6 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-xs group-hover:bg-indigo-50 group-hover:border-indigo-200 group-hover:text-indigo-600 transition-colors">4</div>
                 意見回饋
               </a>
@@ -209,7 +210,7 @@ export default function App() {
                 </div>
               </div>
               
-              <div className="bg-red-50 border border-red-200 rounded-2xl p-5 sm:p-6 mb-6 sm:mb-8 flex gap-3 sm:gap-4 text-red-900 shadow-sm relative overflow-hidden">
+              <div className="bg-red-50 border border-red-200 rounded-2xl p-5 sm:p-6 mb-6 sm:mb-8 flex items-start gap-3 sm:gap-4 text-red-900 shadow-sm relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-1.5 h-full bg-red-500"></div>
                 <TriangleAlert className="w-6 h-6 sm:w-8 sm:h-8 shrink-0 mt-0.5 text-red-600" />
                 <div className="text-base sm:text-lg leading-relaxed flex-1">
@@ -246,7 +247,13 @@ export default function App() {
               <Activity className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">資料匯入範圍</h2>
             </div>
-            <p className="text-base sm:text-lg text-slate-600">考量效率與匯入速度，目前系統撈取的資料範圍如下：</p>
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <p className="text-base sm:text-lg text-slate-600">考量效率與匯入速度，目前系統撈取的資料範圍如下：</p>
+              <div className="flex items-center gap-1.5 text-sm font-medium text-slate-500 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200 sm:hidden self-start">
+                <MoveHorizontal className="w-4 h-4" />
+                <span>表格可左右滑動觀看</span>
+              </div>
+            </div>
           </header>
           
           <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
@@ -296,7 +303,7 @@ export default function App() {
               href="https://docs.google.com/forms/d/e/1FAIpQLSdmG1lU2EZ0dIebMtatexqoE3PJ0B3WDxAsAbbuEE9g3VbM2w/viewform?usp=publish-editor" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-bold text-white bg-blue-600 rounded-xl hover:bg-blue-700 transition-colors shadow-sm hover:shadow-md"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-8 py-4 text-base font-bold text-white bg-blue-600 rounded-xl hover:bg-blue-700 transition-colors shadow-sm hover:shadow-md"
             >
               <MessageSquare className="w-5 h-5" />
               <span>填寫意見回饋表單</span>
