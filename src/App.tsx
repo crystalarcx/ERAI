@@ -164,6 +164,20 @@ export default function App() {
                 打開彙總頁面，用 <strong className="text-blue-600 font-semibold bg-blue-50 px-1.5 sm:px-2 py-0.5 rounded">30 秒</strong> 快速掌握病人病史，無須耗時翻閱各科紀錄。
               </p>
               
+              {/* 行動裝置/高層展示友善的關鍵字大字報 */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
+                <div className="bg-blue-600 rounded-2xl p-5 sm:p-6 text-center text-white shadow-sm flex flex-col justify-center items-center">
+                  <div className="text-xs font-semibold text-blue-200 mb-2 tracking-widest uppercase">核心價值</div>
+                  <div className="text-3xl sm:text-4xl font-extrabold tracking-widest">即刻掌握</div>
+                </div>
+                <div className="bg-slate-800 rounded-2xl p-5 sm:p-6 text-center text-white shadow-sm flex flex-col justify-center items-center">
+                  <div className="text-xs font-semibold text-slate-400 mb-2 tracking-widest uppercase">彙總重點</div>
+                  <div className="text-2xl sm:text-3xl font-bold tracking-widest flex items-center justify-center gap-2 sm:gap-3 w-full">
+                    主訴 <span className="text-slate-500 text-sm opacity-50">●</span> 看診 <span className="text-slate-500 text-sm opacity-50">●</span> 療程
+                  </div>
+                </div>
+              </div>
+              
               <div className="rounded-2xl overflow-hidden border border-slate-200 bg-white relative group shadow-sm">
                 <div className="w-full flex items-center justify-center p-4 sm:p-8 bg-slate-50">
                   <img src={pic1} alt="病歷彙總 AI 按鈕位置" className="max-w-full h-auto rounded shadow-sm border border-slate-200" />
@@ -225,21 +239,37 @@ export default function App() {
             <p className="text-base sm:text-lg text-slate-600">考量效率與匯入速度，目前系統撈取的資料範圍如下：</p>
           </header>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5">
-            {dataScopes.map((scope, idx) => {
-              const Icon = scope.icon;
-              return (
-                <div key={idx} className={`bg-white rounded-2xl p-5 sm:p-6 border ${scope.border} shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] flex items-start gap-3 sm:gap-4 transition-transform hover:-translate-y-1 duration-300`}>
-                  <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl ${scope.bg} ${scope.color} flex items-center justify-center shrink-0`}>
-                    <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-1">{scope.title}</h3>
-                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">{scope.desc}</p>
-                  </div>
-                </div>
-              );
-            })}
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse min-w-[600px]">
+                <thead>
+                  <tr className="bg-slate-50 border-b border-slate-200">
+                    <th className="py-4 px-6 text-sm font-bold text-slate-500 uppercase tracking-widest w-1/3">資料類別</th>
+                    <th className="py-4 px-6 text-sm font-bold text-slate-500 uppercase tracking-widest">匯入時間範圍限制</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100">
+                  {dataScopes.map((scope, idx) => {
+                    const Icon = scope.icon;
+                    return (
+                      <tr key={idx} className="hover:bg-slate-50/50 transition-colors">
+                        <td className="py-4 px-6">
+                          <div className="flex items-center gap-3">
+                            <div className={`w-10 h-10 rounded-xl ${scope.bg} ${scope.color} flex items-center justify-center shrink-0`}>
+                              <Icon className="w-5 h-5" />
+                            </div>
+                            <span className="text-base font-bold text-slate-900">{scope.title}</span>
+                          </div>
+                        </td>
+                        <td className="py-4 px-6 text-base text-slate-600 font-medium leading-relaxed">
+                          {scope.desc}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
           </div>
         </section>
 
