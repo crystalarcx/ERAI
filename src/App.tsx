@@ -25,7 +25,8 @@ import {
   Sparkles,
   TriangleAlert,
   ChevronRight,
-  MoveHorizontal
+  MoveHorizontal,
+  Bell
 } from 'lucide-react';
 
 const dataScopes = [
@@ -51,6 +52,26 @@ const summaryItems = [
 export default function App() {
   return (
     <div className="min-h-screen bg-[#FDFDFD] font-sans text-slate-800 selection:bg-blue-100 selection:text-blue-900 pb-12 sm:pb-24">
+      {/* Top Changelog Bar / 更新日誌 */}
+      <div className="bg-gradient-to-r from-blue-50 via-indigo-50 to-blue-50 border-b border-blue-100/90 text-slate-800">
+        <div className="max-w-4xl mx-auto px-5 sm:px-8 py-3 sm:py-3.5">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 text-xs sm:text-sm">
+            <div className="flex items-center gap-2 shrink-0">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-600 text-white font-bold text-xs shadow-sm">
+                <Bell className="w-3.5 h-3.5" />
+                更新日誌
+              </span>
+              <span className="font-bold text-blue-950 bg-blue-200/60 px-2 py-0.5 rounded text-xs font-mono">
+                2026/09
+              </span>
+            </div>
+            <div className="text-slate-700 leading-relaxed font-medium">
+              加入「<strong className="text-blue-700 font-semibold">更新本次急診資料</strong>」功能：可帶入當次就診的資料，包含 ER note、藥物、護理紀錄、檢驗檢查報告。
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Article Header */}
       <header className="bg-white border-b border-slate-100">
         <div className="max-w-4xl mx-auto px-5 sm:px-8 py-12 sm:py-20">
